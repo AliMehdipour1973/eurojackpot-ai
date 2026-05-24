@@ -1,5 +1,30 @@
-.env
-*.pyc
+# Executables
+*.exe
+*.orig
+
+# Logs
+logs/
+*.log
+
+# Python cache
 __pycache__/
-.next/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Node
 node_modules/
+.next/
+
+# Environment
+.env
+.env.local
+
+# ML artifacts
+*.pkl
+*.joblib
+*.model
+
+# OS
+.DS_Store
+Thumbs.db
