@@ -1,0 +1,21 @@
+2026-05-24 14:14:23 [INFO] Deleted 0 existing row(s) for model_name=random_baseline
+2026-05-24 14:14:23 [INFO] Starting random baseline | pipeline_run_id=5a278727-59ff-40cc-ab27-bb0d0a34d3e4 | draws=435 | simulations=10
+2026-05-24 14:14:23 [INFO] Running 10 simulation(s) per draw across 435 draw(s)...
+2026-05-24 14:14:24 [INFO] Progress: 50 / 435 draws processed (latest draw_date: 20220913)
+2026-05-24 14:14:24 [INFO] Progress: 100 / 435 draws processed (latest draw_date: 20230307)
+2026-05-24 14:14:24 [INFO] Progress: 150 / 435 draws processed (latest draw_date: 20230829)
+2026-05-24 14:14:25 [INFO] Progress: 200 / 435 draws processed (latest draw_date: 20240220)
+2026-05-24 14:14:25 [INFO] Progress: 250 / 435 draws processed (latest draw_date: 20240813)
+2026-05-24 14:14:25 [INFO] Progress: 300 / 435 draws processed (latest draw_date: 20250204)
+2026-05-24 14:14:26 [INFO] Progress: 350 / 435 draws processed (latest draw_date: 20250729)
+2026-05-24 14:14:26 [INFO] Progress: 400 / 435 draws processed (latest draw_date: 20260120)
+2026-05-24 14:14:26 [INFO] Progress: 435 / 435 draws processed (latest draw_date: 20260522)
+2026-05-24 14:14:26 [INFO] === Random Baseline Summary ===
+2026-05-24 14:14:26 [INFO] Total tickets generated: 4350
+2026-05-24 14:14:26 [INFO] hit_rate_main_2_plus: 7.1034%
+2026-05-24 14:14:26 [INFO] hit_rate_main_3_plus: 0.3448%
+2026-05-24 14:14:26 [INFO] hit_rate_total_3_plus: 3.1954%
+2026-05-24 14:14:26 [INFO] avg_main_hits: 0.5028
+2026-05-24 14:14:26 [INFO] avg_euro_hits: 0.3299
+2026-05-24 14:14:26 [INFO] Saved summary to D:\eurojackpot-ai\docs\BASELINE_RESULTS.md
+2026-05-24 14:14:26 [INFO] Random baseline completed successfully.

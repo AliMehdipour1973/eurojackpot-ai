@@ -1,0 +1,84 @@
+2026-05-24 14:28:11 [INFO] Deleted 0 existing row(s) for model_name=xgboost
+2026-05-24 14:28:11 [INFO] Loaded feature matrix: 435 draws, 60 features
+2026-05-24 14:28:11 [INFO] Starting XGBoost walk-forward backtest | pipeline_run_id=071bac6b-acc0-4549-b581-1eddef067013 | draws=435
+2026-05-24 14:28:11 [INFO] Window 1/5 | train=200 draws (20220325..20240220) | validate=50 draws (20240223..20240813)
+2026-05-24 14:28:13 [ERROR] XGBoost walk-forward backtest failed
+Traceback (most recent call last):
+  File "D:\eurojackpot-ai\scripts\xgboost_backtest.py", line 544, in main
+    results = run_walk_forward(conn, df, pipeline_run_id)
+  File "D:\eurojackpot-ai\scripts\xgboost_backtest.py", line 519, in run_walk_forward
+    insert_batch(conn, pending)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\eurojackpot-ai\scripts\xgboost_backtest.py", line 340, in insert_batch
+    execute_batch(cur, INSERT_QUERY, rows, page_size=BATCH_SIZE)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ali Mehdipour\AppData\Roaming\Python\Python314\site-packages\psycopg2\extras.py", line 1216, in execute_batch
+    cur.execute(b";".join(sqls))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+psycopg2.errors.DatatypeMismatch: column "predicted_main_numbers" is of type smallint[] but expression is of type text[]
+LINE 21: ...f067013', 20220325, 20240220, 20240223, 20240813, ARRAY['7',...
+                                                              ^
+HINT:  You will need to rewrite or cast the expression.
+
+2026-05-24 14:31:52 [INFO] Deleted 0 existing row(s) for model_name=xgboost
+2026-05-24 14:31:52 [INFO] Loaded feature matrix: 435 draws, 60 features
+2026-05-24 14:31:52 [INFO] Starting XGBoost walk-forward backtest | pipeline_run_id=807a1236-b17d-4cf6-b81a-ea470f3f32fd | draws=435
+2026-05-24 14:31:52 [INFO] Window 1/5 | train=200 draws (20220325..20240220) | validate=50 draws (20240223..20240813)
+2026-05-24 14:31:54 [ERROR] XGBoost walk-forward backtest failed
+Traceback (most recent call last):
+  File "d:\eurojackpot-ai\scripts\xgboost_backtest.py", line 571, in main
+    results = run_walk_forward(conn, df, pipeline_run_id)
+  File "d:\eurojackpot-ai\scripts\xgboost_backtest.py", line 528, in run_walk_forward
+    result = build_result_row(
+        row,
+    ...<7 lines>...
+        euro_probs,
+    )
+  File "d:\eurojackpot-ai\scripts\xgboost_backtest.py", line 289, in build_result_row
+    actual_main = actual_main_numbers(row)
+                  ^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'actual_main_numbers' where it is not associated with a value
+2026-05-24 14:32:23 [INFO] Deleted 0 existing row(s) for model_name=xgboost
+2026-05-24 14:32:24 [INFO] Loaded feature matrix: 435 draws, 60 features
+2026-05-24 14:32:24 [INFO] Starting XGBoost walk-forward backtest | pipeline_run_id=5c6a7813-3650-4271-bbd0-83fc0eace82e | draws=435
+2026-05-24 14:32:24 [INFO] Window 1/5 | train=200 draws (20220325..20240220) | validate=50 draws (20240223..20240813)
+2026-05-24 14:32:26 [INFO] Window 1/5 complete (50 validation predictions)
+2026-05-24 14:32:26 [INFO] Window 2/5 | train=200 draws (20220916..20240813) | validate=50 draws (20240816..20250204)
+2026-05-24 14:32:32 [INFO] Window 2/5 complete (50 validation predictions)
+2026-05-24 14:32:32 [INFO] Window 3/5 | train=200 draws (20230310..20250204) | validate=50 draws (20250207..20250729)
+2026-05-24 14:32:43 [INFO] Window 3/5 complete (50 validation predictions)
+2026-05-24 14:32:43 [INFO] Window 4/5 | train=200 draws (20230901..20250729) | validate=50 draws (20250801..20260120)
+2026-05-24 14:32:46 [INFO] Window 4/5 complete (50 validation predictions)
+2026-05-24 14:32:46 [INFO] Window 5/5 | train=200 draws (20240223..20260120) | validate=35 draws (20260123..20260522)
+2026-05-24 14:32:48 [INFO] Window 5/5 complete (35 validation predictions)
+2026-05-24 14:32:48 [INFO] === XGBoost Walk-Forward Summary ===
+2026-05-24 14:32:48 [INFO] Total predictions: 235
+2026-05-24 14:32:48 [INFO] hit_rate_main_2_plus: 7.2340% (baseline 7.1034%, improvement 1.84%)
+2026-05-24 14:32:48 [INFO] hit_rate_main_3_plus: 0.4255% (baseline 0.3448%, improvement 23.41%)
+2026-05-24 14:32:48 [INFO] hit_rate_total_3_plus: 4.6809% (baseline 3.1954%, improvement 46.49%)
+2026-05-24 14:32:48 [INFO] avg_main_hits: 0.5191
+2026-05-24 14:32:48 [INFO] avg_euro_hits: 0.3702
+2026-05-24 14:32:48 [INFO] Saved summary to D:\eurojackpot-ai\docs\XGBOOST_RESULTS.md
+2026-05-24 14:32:48 [INFO] XGBoost walk-forward backtest completed successfully.
+2026-05-24 14:33:07 [INFO] Deleted 235 existing row(s) for model_name=xgboost
+2026-05-24 14:33:07 [INFO] Loaded feature matrix: 435 draws, 60 features
+2026-05-24 14:33:07 [INFO] Starting XGBoost walk-forward backtest | pipeline_run_id=fcee7081-b239-454f-ac3c-99a257edc217 | draws=435
+2026-05-24 14:33:07 [INFO] Window 1/5 | train=200 draws (20220325..20240220) | validate=50 draws (20240223..20240813)
+2026-05-24 14:33:09 [INFO] Window 1/5 complete (50 validation predictions)
+2026-05-24 14:33:09 [INFO] Window 2/5 | train=200 draws (20220916..20240813) | validate=50 draws (20240816..20250204)
+2026-05-24 14:33:11 [INFO] Window 2/5 complete (50 validation predictions)
+2026-05-24 14:33:11 [INFO] Window 3/5 | train=200 draws (20230310..20250204) | validate=50 draws (20250207..20250729)
+2026-05-24 14:33:13 [INFO] Window 3/5 complete (50 validation predictions)
+2026-05-24 14:33:13 [INFO] Window 4/5 | train=200 draws (20230901..20250729) | validate=50 draws (20250801..20260120)
+2026-05-24 14:33:15 [INFO] Window 4/5 complete (50 validation predictions)
+2026-05-24 14:33:15 [INFO] Window 5/5 | train=200 draws (20240223..20260120) | validate=35 draws (20260123..20260522)
+2026-05-24 14:33:17 [INFO] Window 5/5 complete (35 validation predictions)
+2026-05-24 14:33:17 [INFO] === XGBoost Walk-Forward Summary ===
+2026-05-24 14:33:17 [INFO] Total predictions: 235
+2026-05-24 14:33:17 [INFO] hit_rate_main_2_plus: 7.2340% (baseline 7.1034%, improvement 1.84%)
+2026-05-24 14:33:17 [INFO] hit_rate_main_3_plus: 0.4255% (baseline 0.3448%, improvement 23.41%)
+2026-05-24 14:33:17 [INFO] hit_rate_total_3_plus: 4.6809% (baseline 3.1954%, improvement 46.49%)
+2026-05-24 14:33:17 [INFO] avg_main_hits: 0.5191
+2026-05-24 14:33:17 [INFO] avg_euro_hits: 0.3702
+2026-05-24 14:33:17 [INFO] Saved summary to D:\eurojackpot-ai\docs\XGBOOST_RESULTS.md
+2026-05-24 14:33:17 [INFO] XGBoost walk-forward backtest completed successfully.

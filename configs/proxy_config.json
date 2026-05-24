@@ -1,0 +1,24 @@
+{
+    "proxy_settings": {
+        "enabled": false,
+        "proxy_type": "http",
+        "proxy_host": "127.0.0.1",
+        "proxy_port": 8080
+    },
+    "scraping_settings": {
+        "request_delay": {
+            "min": 2,
+            "max": 5
+        },
+        "max_retries": 5,
+        "user_agents": [
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        ]
+    },
+    "logging_settings": {
+        "level": "INFO",
+        "log_file": "logs/eurojackpot_scraper.log"
+    }
+}
